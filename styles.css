@@ -1,0 +1,239 @@
+/* Общие стили для всех устройств */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Стили для десктопа */
+body {
+    background-color: #ffffff; /* Белый фон */
+    font-size: 18px; 
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:  25px 134px 25px 200px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 850;
+}
+
+nav ul li.logo img {
+    height: 70px; /* Размер логотипа */
+    margin-right: 15px; /* Отступ между логотипом и Features */
+}
+
+.header-buttons {
+    display: flex;
+    gap: 25px;
+}
+
+.talk-to-sales,
+.get-started {
+    background-color: transparent;
+    border: 2px solid #611f69;
+    color: #611f69;
+    padding: 20px 30px;
+    border-radius: 5px; 
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 22px;
+}
+
+.get-started {
+    background-color: #611f69;
+    color: #ffffff;
+   
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 50px; /* Отступ между лупой и кнопкой Talk to sales */
+}
+
+.search-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.search-button img {
+    width: 80px;
+    height: 80px;
+}
+
+.hero {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    color: #000000;
+}
+
+.hero p {
+    font-size: 1.4rem;
+    color: #000000;
+    
+}
+
+.hero h1 span {
+    color: #611f69;
+}
+
+.get-started-large {
+    background-color: #611f69;
+    color: #ffffff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    margin: 20px 0;
+    width: 180px;
+    height: 55px;
+}
+
+.companies {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 55px;
+}
+
+.companies img {
+    height: 65px; /* Размер иконок компаний */
+}
+
+.companies .sign-in {
+    font-size: 16px;
+    color: #333;
+    margin-left: 20px; /* Отступ для Sign in от иконок */
+}
+
+.app-preview {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.app-preview img {
+    max-width: 1100px;
+    border-radius: 10px;
+}
+
+/* Адаптивные стили для мобильных устройств */
+@media (max-width: 770px) {
+    nav ul li a  { 
+        display: none; 
+    }
+    header {
+        flex-direction: column;
+        align-items: center; /* Aligns everything to the center */
+        padding: 10px 20px; /* Slightly reduces padding */
+    }
+
+    .logo {
+        position: absolute; /* Фиксируем логотип */
+        top: 15px; /* Отступ сверху */
+        left: 15px; /* Отступ слева */
+    }
+    
+    #logo-slack {
+        height: 65px; /* Настройте размер логотипа по своему усмотрению */
+        width: auto; /* Чтобы сохранить пропорции */
+    }
+    /* Контейнер для кнопок */
+    
+
+    .header-buttons {
+        position: relative; /* Устанавливаем относительное позиционирование для родителя */
+    }
+    
+    .search-container {
+        position: absolute; /* Устанавливаем абсолютное позиционирование для контейнера поиска */
+        top: 10px; /* Отступ сверху */
+        right: 15px; /* Отступ слева */
+    }
+    
+    .search-button img {
+        width: 45px; /* Размер изображения */
+        height: 45px; /* Размер изображения */
+        display: block; /* Отображение как блочный элемент для избежания отступов */
+    }
+
+    
+    .search-button p{
+        display: none;
+    }
+
+
+
+    .header-buttons {
+        flex-direction: column;
+        gap: 10px; /* Reduces spacing between buttons */
+        width: 100%;
+    }
+
+
+    .hero h1 {
+        font-size: 56px; /* Adjusts hero title size */
+        text-align: center; /* Centers the hero text */
+        margin-top: 95px;
+    }
+    .button.talk-to-sales {
+        display: none; 
+    }
+
+    .button.get-started{
+        display: none; 
+    }
+
+    .talk-to-sales{
+        display: none; 
+    }
+    .get-started{
+        display: none; 
+    }
+
+    .get-started-large {
+        padding: 5px 16px; /* Adjusts button padding */
+        font-size: 1rem; 
+    }
+
+    .companies {
+        flex-wrap: wrap; 
+        gap: 15px; /* Reduces the space between logos */
+        justify-content: center; /* Centers company logos */
+    }
+
+    .companies img {
+        height: 25px; /* Adjusts logo size */
+    }
+
+    .app-preview img {
+        max-width: 100%;
+        border-radius: 5px;
+        margin-top: 20px; /* Adds space above app preview */
+    }
+}
